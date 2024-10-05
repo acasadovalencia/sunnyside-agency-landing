@@ -2,9 +2,13 @@
 :root {
     --font-c-secondary: #fff;
     --font-c-primary: #000;
-    /* Tipografía */
+    --font-c-tertiary: hsl(232, 10%, 55%);
     --font-primary: "Barlow", sans-serif;
     --font-secondary: "Fraunces", serif;
+    --bg-c-primary: #fff;
+    --bg-c-secondary: #000;
+    --bg-c-tertiary: hsl(51, 100%, 49%);
+    --bg-c-cuaternary: hsl(7, 99%, 70%);
   }
   
   /* Las adaptamos al modo oscuro */
@@ -207,4 +211,66 @@
     position: absolute;
     top: calc(50% - 3.5625rem);
     left: calc(50% - .9375rem);
+  }
+  .Section-wrapper{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    background-color: var(--bg-c-primary);
+  }
+  .Section-wrapper:nth-child(even){
+    direction: rtl;
+  }
+  .Section-wrapper:nth-child(even)>.Section-description>.Section-a::after{
+    background-color: var(--bg-c-cuaternary);
+  }
+  .Section-description{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2.5rem;
+    height: 100%;
+    padding: 10rem;
+  }
+  
+  .Section-h3{
+    font-size: 42px;
+    font-weight: 900;
+    font-family: var(--font-secondary);
+  }
+  .Section-paragraph{
+    color: var(--font-c-tertiary);
+    letter-spacing: -.7px;
+    line-height: 2rem;
+    font-weight: 600;
+  }
+  .Section-a{
+    font-family: var(--font-secondary);
+    text-transform: uppercase;
+    font-weight: 700;
+    position: relative;
+    z-index: 1;
+  }
+  .Section-a::after{
+    content: "";
+    display: block;
+    width: 100%;
+    padding: 0 .5rem;
+    height: 8px;
+    background-color: var(--bg-c-tertiary);
+    opacity: 40%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+  .Section-image{
+    height: 100%;
+  }
+  .Section-picture{
+    height: 100%;
+  }
+  .Section-img{
+    height: 100%;
+    object-fit: cover;
   }
