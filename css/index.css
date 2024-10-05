@@ -3,6 +3,9 @@
     --font-c-secondary: #fff;
     --font-c-primary: #000;
     --font-c-tertiary: hsl(232, 10%, 55%);
+    --font-c-tertiary-dark: hsl(213, 9%, 39%);
+    --font-c-cuaternary: hsl(167, 40%, 24%);
+    --font-c-quinary: hsl(198, 62%, 26%);
     --font-primary: "Barlow", sans-serif;
     --font-secondary: "Fraunces", serif;
     --bg-c-primary: #fff;
@@ -286,10 +289,15 @@
     display: grid;
     grid-template-columns: repeat(2 , 1fr);
   }
-  .Grid-item:nth-child(3){
-    order: 2;
-  }
-  .Grid-article{
+  .Grid-item:nth-child(3) {
+    grid-column: 2;
+    grid-row: 2;
+}
+.Grid-item:nth-child(4) {
+    grid-column: 1;
+    grid-row: 2;
+}
+.Grid-article{
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
@@ -299,18 +307,18 @@
     padding: 0 10rem;
     height: 100%;
   }
-  .Article-h3{
+.Article-h3{
     font-size: 2.625rem;
     font-weight: 900;
     font-family: var(--font-secondary);
   }
-  .Article-paragraph{
+.Article-paragraph{
     color: var(--font-c-tertiary);
     letter-spacing: -.7px;
     line-height: 2rem;
     font-weight: 600;
   }
-  .Article-a{
+.Article-a{
     font-family: var(--font-secondary);
     text-transform: uppercase;
     font-weight: 700;
@@ -321,7 +329,7 @@
     justify-content: flex-start;
     align-items: center;
   }
-  .Article-a::after{
+.Article-a::after{
     content: "";
     display: block;
     width: 100%;
@@ -333,13 +341,42 @@
     bottom: 0;
     border-radius: 1rem;
   }
-  .Grid-image{
+.Grid-image{
+    height: 100%;
+    position: relative;
+  }
+.Grid-picture{
     height: 100%;
   }
-  .Grid-picture{
-    height: 100%;
-  }
-  .Grid-img{
+.Grid-img{
     height: 100%;
     object-fit: cover;
   }
+.Article-image{
+    position: absolute;
+    bottom: 3.75rem;
+    left: 0;
+    text-align: center;
+    padding: 0 8rem;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.7rem;
+}
+.Article-h4{
+    font-family: var(--font-secondary);
+    font-size: 1.7rem;
+    font-weight: 900;
+    color: var(--font-c-cuaternary);
+}
+.Grid-item:nth-child(6) .Article-h4{
+    color: var(--font-c-quinary);
+
+}
+.Image-paragraph{
+    font-size: 1.05rem;
+    letter-spacing: -.5px;
+    line-height: 1.7rem;
+    color: var(--font-c-tertiary-dark);
+}
