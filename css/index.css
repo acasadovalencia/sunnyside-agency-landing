@@ -362,3 +362,9 @@
     font-size: .8rem;
     color: var(--font-c-tertiary);
 }
+.Images-ul{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
