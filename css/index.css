@@ -145,6 +145,7 @@
   }
   .Header{
     position: fixed;
+    z-index: 1;
     top: 0;
     width: 100%;
     color: var(--font-c-secondary);
@@ -176,4 +177,34 @@
     font-weight: 700;
     padding: 1.25rem 2.1875rem;
     border-radius: 2rem;
+  }
+  .Hero{
+    position: relative;
+    height: 100vh;
+  }
+  .Hero-picture{
+    height: 100%;
+    width: 100%;
+  }
+  .Hero-img{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+  }
+  .Hero-h2{
+    position: absolute;
+    top: 12.5rem;
+    width: 100%;
+    text-align: center;
+    font-size: 3.25rem;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    font-family: var(--font-secondary);
+    font-weight: 900;
+    color: var(--font-c-secondary);
+  }
+  .Hero-svg{
+    position: absolute;
+    top: calc(50% - 3.5625rem);
+    left: calc(50% - .9375rem);
   }
