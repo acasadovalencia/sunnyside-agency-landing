@@ -465,6 +465,16 @@
   }
 }
 @media(max-width:980px){
+  .Article-h3{
+    font-size: 2rem;
+  }
+  .Article-image{
+    bottom: 2rem;
+    padding: 0 2.5rem;
+    gap:1rem;
+  }
+}
+@media(max-width:790px){
   .Grid{
     grid-template-columns: 1fr;
   }
@@ -488,7 +498,7 @@
   align-items: center;
 }
 }
-@media(max-width:760px){
+@media(max-width:750px){
   .Hero-h2{
     top: 10rem;
     font-size: 2.5rem;
@@ -529,10 +539,10 @@
 @media(max-width:500px){
   .Article-image {
     padding: 0 2rem;
-    gap:1.5rem;
-    bottom: 2rem;
   }
 }
-@media(max-width:415px){
-  
+@media(max-width:480px){
+  .Article-image {
+    bottom: 3.75rem;
+  } 
 }
