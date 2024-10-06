@@ -499,15 +499,37 @@
 }
 }
 @media(max-width:750px){
-  .Hero-h2{
-    top: 10rem;
-    font-size: 2.5rem;
+  .Header-wrapper{
+    position: relative;
   }
   .Nav{
     display: none;
+    position: absolute;
+    top: 6.25rem;
+    right: 2.8125rem;
+  }
+  .Nav.isOpen{
+    display: block;
+  }
+  .Nav-ul{
+    flex-direction: column;
+    background-color: #fff;
+    color: var(--font-c-tertiary-dark);
+    padding: 2.5rem 5.625rem;
+  }
+  .Nav-btn{
+    background-color: var(--bg-c-tertiary) ;
+  }
+  .Nav-btn:hover{
+    background-color: var(--bg-c-tertiary);
+    color: #000;
   }
   .Nav-menu{
     display: block;
+  }
+  .Hero-h2{
+    top: 10rem;
+    font-size: 2.5rem;
   }
   .Grid-article{
     padding: 4.375rem 2rem;
