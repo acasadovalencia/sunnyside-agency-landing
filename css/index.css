@@ -517,6 +517,12 @@
     pointer-events: all;
     transform: scaleY(1);
   }
+  .Nav + .Nav-menu .Menu-svg path{
+    transition: fill .5s ease;
+  }
+  .Nav.isOpen + .Nav-menu .Menu-svg path{
+    fill: #000;
+  }
   .Nav-ul{
     flex-direction: column;
     background-color: #fff;
@@ -532,6 +538,7 @@
   }
   .Nav-menu{
     display: block;
+    cursor: pointer;
   }
   .Hero-h2{
     top: 10rem;
