@@ -503,13 +503,19 @@
     position: relative;
   }
   .Nav{
-    display: none;
+    opacity: 0;
+    pointer-events: none;
     position: absolute;
     top: 6.25rem;
     right: 2.8125rem;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: all 1s ease;
   }
   .Nav.isOpen{
-    display: block;
+    opacity: 1;
+    pointer-events: all;
+    transform: scaleY(1);
   }
   .Nav-ul{
     flex-direction: column;
@@ -567,4 +573,15 @@
   .Article-image {
     bottom: 3.75rem;
   } 
+}
+@media(max-width:450px){
+  .Nav{
+    width: 100%;
+    right: 0;
+    padding: 0 2.8125rem;
+  }
+  .Nav-ul{
+    width: 100%;
+    padding: 2.5rem 0;
+  }
 }
