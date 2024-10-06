@@ -381,6 +381,10 @@
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: flex-start;
+    width: 100%;
+}
+.Images-li{
+  width: 100%;
 }
 .Footer{
   background-color: var(--bg-c-quinary);
