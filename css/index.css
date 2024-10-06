@@ -150,9 +150,10 @@
     -webkit-font-smoothing: antialiased;
     /* opcional */ 
     -moz-osx-font-smoothing: grayscale;
+    position: relative;
   }
   .Header{
-    position: fixed;
+    position: absolute;
     z-index: 1;
     top: 0;
     width: 100%;
